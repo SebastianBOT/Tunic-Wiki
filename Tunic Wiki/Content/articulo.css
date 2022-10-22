@@ -1,0 +1,104 @@
+/* Este CSS es usado para darle estilo a todos los 'articulos' o
+  secciones de la Wiki. Por ejemplo, los archivos (HTML) de los Items o 
+  los bosses, debido a que sus estructuras son similares. */
+
+* {
+  box-sizing: border-box;
+  color: #000;
+  font: 20px sans-serif;
+  margin: 0;
+  padding: 0;
+  }
+  
+li {
+  list-style: none;
+}
+  
+h1 {
+  font: bold 2rem sans-serif;
+  margin: 20px 0;
+}
+  
+h2 {
+  font: bolder 1.5rem sans-serif;
+  margin: 40px 0 0 0;
+}
+
+h3 {
+  font: bolder 1.1rem sans-serif;
+  margin: 30px 0 0 0;
+}
+  
+cite {
+  font: 16px sans-serif;
+}
+
+hr {
+  border: 0;
+  background: rgb(202, 195, 195);
+  clear:both;
+  display:block;
+  height: 1px;
+  margin: 40px 0 0 0;
+  width: 96%;               
+  
+}
+
+section {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  padding: 10px 50px;
+  width: 100%;
+}
+
+img {
+  border-radius: 20px;
+  width: 80%;
+}
+
+.imagen {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Navbar */
+
+.navbar, .navbar__ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+  
+.navbar {
+  box-shadow: 1px 1px 5px #000;
+  height: 50px;
+}
+  
+.navbar__ul {
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+} 
+
+.contenedor-principal {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+/* Responsive */
+
+@media (min-width: 950px) {
+
+  section {
+    width: 950px;
+  }
+}

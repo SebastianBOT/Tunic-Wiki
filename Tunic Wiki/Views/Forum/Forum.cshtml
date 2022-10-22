@@ -1,0 +1,69 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @model List<Tunic_Wiki.Models.Post>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    @Styles.Render("~/Styles/css")
+    @Styles.Render("~/Forum/css")
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar__ul">
+            <li class="navbar__li"><a href="~/Home/Index">Home</a></li>
+            <li class="navbar__li"><a href="~/Compartido/Contenido">Content</a></li>
+            <li class="navbar__li"><a href="~/Home/About">About</a></li>
+            <li class="navbar__li"><a href="~/Forum/Forum">Forum</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- Forum Image -->
+        <div class="img-container">
+            <img src="~/images/forum/tunic-forum.png" alt="Tunic">
+        </div>
+
+       
+        <!-- Create Post Section -->
+        <section class="create-post-section">
+
+            <form class="form" method="post" action="/Forum/Guardar">
+                <div>
+                    <label id="post-title-label" for="title-input">Post Title</label>
+                    <input type="text" id="title-input" name="titulo">
+                    <label for="content-input">Post Content</label>
+                    <input type="text" id="content-input" cols="30" rows="3" name="contenido">
+                    <button id="create-post-btn" type="submit">Create Post</button>
+                </div>
+            </form>
+
+        </section>
+
+        <section class="post-content-section">
+            @foreach (Tunic_Wiki.Models.Post pd in Model)
+            {
+                <div class="post">
+                    <div class="post__img">
+                        <img src="~/images/forum/avatar.png" alt="User">
+                    </div>
+                    <div class="post__container">
+                        <div class="post__title">@pd.titulo</div>
+                        <div class="post__content">@pd.contenido</div>
+                        <hr>
+                    </div>
+                </div>
+            }
+        </section>
+
+    </div>
+
+</body>
+</html>
+

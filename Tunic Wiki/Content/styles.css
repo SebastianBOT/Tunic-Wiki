@@ -1,0 +1,113 @@
+/* https://colorhunt.co/palette/2c3333395b64a5c9cae7f6f2 */
+
+* {
+  box-sizing: border-box;
+  color: #000;
+  font: 20px sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+cite {
+  font-size: 16px;
+}
+
+/* Navbar */
+
+.navbar, .navbar__ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  box-shadow: 1px 1px 5px #000;
+  height: 50px;
+}
+
+.navbar__ul {
+  gap: 20px;
+}
+
+/* Inicio */
+
+.inicio {
+  align-items: center;
+  background: url('../images/tunic-images/tunic-1.jpg') no-repeat center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  
+}
+
+.inicio img {
+  width: 80%;
+}
+
+/* Descripcion */
+
+.descripcion, .descripcion__imagen, .descripcion__texto {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.descripcion {
+  padding: 50px;
+}
+
+.descripcion__texto {
+  align-items: flex-start;
+}
+
+.descripcion__imagen {
+  padding: 20px;
+}
+
+.descripcion__imagen img{
+  border-radius: 20px;
+  width: 100%;
+}
+
+/* Responsive */
+
+@media (min-width: 750px) {
+  .inicio img {
+    width: 600px; 
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .descripcion {
+    flex-direction: row;
+    gap: 40px;
+    height: 100vh;
+  }
+  .descripcion__imagen {
+    width: 50%;
+  }
+  .descripcion__texto {
+    width: 50%;
+  }
+}

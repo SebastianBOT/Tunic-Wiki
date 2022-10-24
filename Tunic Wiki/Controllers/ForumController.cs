@@ -29,7 +29,8 @@ namespace Tunic_Wiki.Controllers
                 contenido = contenido
             };
             consultas.Guardar(post1);
-            return View("Forum");
+            IEnumerable<Post> items = consultas.ConsultarItems();
+            return View("Forum", items);
         }
 
     }
